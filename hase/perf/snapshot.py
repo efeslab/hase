@@ -112,7 +112,7 @@ def open_pt_event(cpu: int, pid: int) -> PMU:
     attr.type = intel_pt_type()
     # FIXME: find out how config works,
     # currenty copied from strace output
-    attr.config = 0x300E601
+    attr.config = 0x300f621
     attr.sample_type = SampleFlags.PERF_SAMPLE_MASK
     attr.sample_period = 1
     attr.clockid = 1
