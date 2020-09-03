@@ -64,4 +64,6 @@ def parse_arguments(argv: List[str]) -> argparse.Namespace:
 
     unpack.set_defaults(func=lazy_import_unpack_command)
 
-    return parser.parse_args(argv[1:])
+    args, unknown = parser.parse_known_args(argv[1:])
+    args.args += unknown
+    return args
